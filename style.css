@@ -141,7 +141,7 @@ body {
     font-weight: 800;
     text-decoration: none;
     outline: none;
-    font-size: 2rem;
+    font-size: 2.5rem; /* or 3rem for even bigger buttons */
 }
 .nav__list-link::before {
     content: '';
