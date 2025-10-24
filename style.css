@@ -140,8 +140,19 @@ body {
     position: relative;
     font-weight: 800;
     text-decoration: none;
-    outline: none;
-    font-size: 5rem; /* or 3rem for even bigger buttons */
+    outline: none; 
+    font-size: 1rem; /* mobile */
+}
+@media only screen and (min-width: 36em) {
+    .nav__list-link {
+        font-size: 1.5rem; /* tablet */
+    }
+}
+
+@media only screen and (min-width: 62em) {
+    .nav__list-link {
+        font-size: 2rem; /* desktop */
+    }
 }
 .nav__list-link::before {
     content: '';
@@ -536,25 +547,7 @@ body {
     transform-origin: center;
     transition: all .35s ease-in-out;
 }
-
-/*
- * ==================
- * Footer
- * ==================
- */
-.footer{
-    font-size: 1.4rem;
-    color: white;
-    font-weight: 700;
-    backdrop-filter: blur(75px);
-    text-align: center;
-    padding-top: 1.3rem;
-    padding-bottom: 1.3rem;
-}
-.footer__link{
-    color: #64fcd9;
-}
-
+ 
 /*
  * ========================
  * Small Screen -- 576px
@@ -591,9 +584,7 @@ body {
     .nav__list-item:last-of-type{
         margin-right: 0;
     }
-    .nav__list-link{
-        font-size: 1.3rem;
-    }
+   
     .nav__hamburger-btn{
         display: none;
     }
