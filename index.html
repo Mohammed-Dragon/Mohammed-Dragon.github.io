@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap"
+          rel="stylesheet">
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
+
+    <!-- CSS & JS -->
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./index.js" defer></script>
+
+    <!-- Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="100% FREE Professional Portfolio Templates - Plain Template"/>
+    <meta name="keywords" content="OSSPH, Free portfolio"/> 
+
+    <!-- Icons -->
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/icons/apple-touch-icon-57x57.png">
+
+        <!-- mobile specific metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+<body>
+<main>
+    <!-- Hero Header -->
+    <header id="heroHeader" class="hero-header">
+        <nav id="navBar" class="nav">
+            <div class="container nav__container">
+                <!-- 👇 Your Name / Logo -->
+                <a href="#heroHeader" class="nav__brand">Mohammed Ali</a> 
+                <!-- Hamburger Button -->
+                <button type="button" id="hamburgerBtn" class="nav__hamburger-btn"> 
+                    <span class="nav__hamburger-top"></span>
+                    <span class="nav__hamburger-center"></span>
+                    <span class="nav__hamburger-bottom"></span>
+                </button>
+                <ul id="navList" class="nav__list">
+                    <li class="nav__list-item">
+                        <a class="nav__list-link active" href="#heroHeader">Home</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a class="nav__list-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a class="nav__list-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a class="nav__list-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="header__container container">
+            <div class="header__left">
+                <span class="header__sup-text">Hello! I am a</span>
+                <h1 class="header__title">
+                    <span class="header__title-1" data-role="Flutter">Flutter</span>
+                    <span class="header__title-2" data-role="Developer">Developer</span>
+                </h1>
+                <p class="header__msg">I'm a Mobile App Developer specializing in building seamless, user-friendly applications using Flutter and Dart. With a Bachelor's in Computer Science and hands-on experience in designing using Figma and Canva, front-end and back-end development, and testing/updating.</p>
+                <a href="#services" class="header__resume">Resume</a>
+            </div>
+            <div class="header__right">
+                <img src="./assets/illustrations/header.svg" alt="Header section illustration"/>
+            </div>
+        </section>
+        <span class="header__bg"></span>
+    </header>
+
+    <!-- Services -->
+    <section id="services" class="section container">
+        <h2 class="section__title">Services</h2> 
+        <div class="service-cards">
+            <article class="service-card__box">
+                <span class="service-card__illustration">
+                    <img src="./assets/services/support.svg" alt="Support Illustration"/>
+                </span>
+                <h3 class="service-card__title">Designing</h3>
+                <p class="service-card__msg"> Specialized in creating applications that are both visually appealing and user-friendly.</p>
+                <span class="service-card__bg"></span>
+            </article>
+            <article class="service-card__box">
+                <span class="service-card__illustration">
+                    <img src="./assets/services/design.svg" alt="Design Illustration"/>
+                </span>
+                <h3 class="service-card__title">Developing</h3>
+                <p class="service-card__msg">I offer custom app development services tailored to your specific needs as a solo professional.</p>
+                <span class="service-card__bg"></span>
+            </article>
+            <article class="service-card__box">
+                <span class="service-card__illustration">
+                    <img src="./assets/services/developing.svg" alt="Deploy Illustration"/>
+                </span>
+                <h3 class="service-card__title">Testing</h3>
+                <p class="service-card__msg"> I always test my apps and fix any bugs or issues that may appear.</p>
+                <span class="service-card__bg"></span>
+            </article>
+        </div>
+    </section>
+ 
+        <!-- portfolio -->
+    <section id="projects" class="section container">  
+        <h2 class="section__title">Projects</h2>
+        <div class="row s-portfolio__list block-large-1-2 block-tab-full collapse"> 
+            <div class="column card" data-aos="fade-up" v-for="(portfolio, index) in portfolios" :key="index">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <div class="folio-item__thumb-link">
+                            <img :src="portfolio.imgLink" alt="">
+                        </div>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">{{ portfolio.techStack }}</div>
+                        <h4 class="folio-item__title">{{ portfolio.title }}</h4>
+                    </div>
+                    <div class="folio-item__project-link">
+                        <a :href="portfolio.githubLink" title="GitHub Link" >GitHub Link</a>
+                        |
+                        <a :href="portfolio.projectLink" title="Project Link">Project Video</a>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </section> 
+    
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js" integrity="sha512-Blu6KWaTqestULmtJUTB2mwDFTB/FDRuTHV52Uu5dTFVQZ8YWUq2LuxN/brNEjWAqlHr50oAbxrydsuxoK/mqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script> 
+        
+    <section id="contact">
+        <h2 class="section__title">Contact</h2>
+        <ul class="contact-list"> 
+            <li>
+            <a href="https://www.linkedin.com/in/mohammed-ali-5a830330a" target="_blank">
+                <img class="contact-icon" src="assets/contact/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <p>LinkedIn</p>
+            </li>
+            <li >
+            <a href="https://github.com/Mohammed-Ali-Dracode" target="_blank">
+                <img class="contact-icon" src="assets/contact/github.svg" alt="Github" />
+            </a>
+            <p>Github</p>
+            </li>
+            <li >
+            <a href="mailto:mohammed.ali.developer@gmail.com">
+                <img class="contact-icon" src="assets/contact/gmail.svg" alt="Gmail" />
+            </a>
+            <p>Gmail</p>
+            </li>
+        </ul>
+
+        <a href="assets/CV_Mohammed_Ali.pdf" class="header__resume" download data-aos="fade-up">
+            Download CV
+        </a>
+    </section> 
+</main>
+</body>
+</html>
